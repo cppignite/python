@@ -18,5 +18,12 @@ for x in range(1, desiredNumber):
 story = "You are in a {} forest, and you are {}."
 print(story.format(*vocabList))
 
+#transition into fileIO
+requests = ["noun","verb","verb"]
+for x in range(0,len(requests)):
+    vocabList[x] = input(request[x])
+story = "A {} is often great at {} and {}."
+print(story.format(*vocabList))
+
 input("Press Enter to Quit") 
 
