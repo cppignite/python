@@ -21,7 +21,7 @@ print(story.format(*vocabList))
 #transition into fileIO
 requests = ["noun","verb","verb"]
 for x in range(0,len(requests)):
-    vocabList[x] = input(request[x])
+    vocabList.append(input(requests[x]))
 story = "A {} is often great at {} and {}."
 print(story.format(*vocabList))
 
