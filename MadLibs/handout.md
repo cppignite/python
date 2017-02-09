@@ -253,7 +253,7 @@ aBetterQuote = "\"To the hand you talk, because listening I\'m not.\""
 We can also iterate from the end to the beginning using `reversed()`:
 
 ```
-for countdown in reversed(range(0,3  )):
+for countdown in reversed(range(0,3)):
     print("{} cat(s)".format(str(countdown)))
 #This will print out:
 #2 cat(s)
