@@ -1,4 +1,29 @@
-# Handout #2 
+# Handout #2
+
+### Type Casting
+A number only stores the numerical value when a character/string stores the literal representation. For example:
+
+```
+aNumber = 0
+aNumberLiterally = "0"
+```
+
+Are those equal? **They aren't!**
+
+In order to convert a number into a literal representation, we need to _cast_ it:
+
+```
+anotherNumber = 1
+anotherNumberLiterally = str(anotherNumber)
+#This converts the value in anotherNumber into a string "1", then assign it to anotherNumberLiterally
+```
+Similarly, we can interpret a string as a number:
+
+```
+aDecimalNumberLiterally = "11.4"
+aDecumalNumber = float(aDecimalNumberLiterally)
+#This will convert the string "11.4" into a number 11.4
+```
 
 ### Array/Lists
  
@@ -12,11 +37,16 @@ To create an empty list/array, we will use:
 
 To create a predetermined array, we can use:
 
-`list = ["a thing", "another thing"]`
+```
+list = ["a thing", "another thing"]
+#This will create an array of size 2 containing "a thing" and "another thing" in order
+```
 
 #### Access
 
 To get to a specific _element_ in the list, we will need an _index_. Indices starts from **0** as the first _element_ and count onwards.
+
+##### **The size of the array must be defined in order to use indices. Indices must be less than the size!** 
 
 ```
 value = list[0] 
@@ -81,7 +111,53 @@ print(aComplicatedFormula.format("Dave","Cats","Happy Dave"))
 #We can even do multiple placeholders!
 ```
 
+### `For` Loop
+
+`For` loop is a powerful control structure that iterates over a sequence of things.
+
+#### Syntax
+```
+numberList = [1,2,3,4]
+for value in numberList:
+    sum = sum + value
+print("the sum is: " + str(sum))
+#This will iterate all the items in the list and add them together, then the sum is printed. "the sum is: 10"
+
+for counter in range(0,5):
+    print("{} cat(s) ".format(str(counter)))
+#This will print out 
+#0 cat(s) 
+#1 cat(s) 
+#2 cat(s) 
+#3 cat(s) 
+#4 cat(s) 
+```
+
 ## Additional Reference
+
+### Type Casting
+
+We can use the following methods to type cast:
+
+| Function              | Description                                                             |
+|-----------------------|-------------------------------------------------------------------------|
+| int(x [,base])        | Converts x to an integer. base specifies the base if x is a string.     |
+| long(x [,base] )      | Converts x to a long integer. base specifies the base if x is a string. |
+| float(x)              | Converts x to a floating-point number.                                  |
+| complex(real [,imag]) | Creates a complex number.                                               |
+| str(x)                | Converts object x to a string representation.                           |
+| repr(x)               | Converts object x to an expression string.                              |
+| eval(str)             | Evaluates a string and returns an object.                               |
+| tuple(s)              | Converts s to a tuple.                                                  |
+| list(s)               | Converts s to a list.                                                   |
+| set(s)                | Converts s to a set.                                                    |
+| dict(d)               | Creates a dictionary. d must be a sequence of (key,value) tuples.       |
+| frozenset(s)          | Converts s to a frozen set.                                             |
+| chr(x)                | Converts an integer to a character.                                     |
+| unichr(x)             | Converts an integer to a Unicode character.                             |
+| ord(x)                | Converts a single character to its integer value.                       |
+| hex(x)                | Converts an integer to a hexadecimal string.                            |
+| oct(x)                | Converts an integer to an octal string.                                 |
 
 ### Lists
 
@@ -97,7 +173,7 @@ Even other Lists!
 
 #### Access
 
-Phython suppose _negative indicing_, that means negative values will count from the back!
+Phython support _negative indicing_, that means negative values will count from the back!
 
 ```
 secondLast = list[-2] 
@@ -153,7 +229,7 @@ Sometimes we want to type a quote or special symbols that are already mean somet
 aYodaQuote = ""Do or do not, there is no try.""
 #This will not work!
 aBetterQuote = "\"To the hand you talk, because listening I\'m not.\""
-#All the Offending characters are preceeded by a '\'
+#All the offending characters are preceeded by a '\'
 ```
 
 | Escape Sequence | Description                         |
@@ -172,3 +248,15 @@ aBetterQuote = "\"To the hand you talk, because listening I\'m not.\""
 | \ooo            | Character with octal value ooo      |
 | \xHH            | Character with hexadecimal value HH |
 
+### `For` Loop
+
+We can also iterate from the end to the beginning using `reversed()`:
+
+```
+for countdown in reversed(range(0,3  )):
+    print("{} cat(s)".format(str(countdown)))
+#This will print out:
+#2 cat(s)
+#1 cat(s)
+#0 cat(s)
+```
