@@ -1,11 +1,9 @@
 from random import randint
-import os
 
 def main():
     won = False
-    size = 10  # number of cards
-    hiddenarray = ['x'] * size
-    array = initarray(size)
+    hiddenarray = ['x'] * 10
+    array = initarray()
     while not won:
         printarray(hiddenarray)
         first = int(input("Enter number of 1st card: ")) - 1
@@ -15,36 +13,32 @@ def main():
         hiddenarray[second] = array[second]
         printarray(hiddenarray)
         if hiddenarray[first] != hiddenarray[second]:
-            print("\nNo match!")
             hiddenarray[first] = 'x'
             hiddenarray[second] = 'x'
         won = checkarray(hiddenarray)
     print("\nCongrats! You won!")
 
-def initarray(size):
+def checkarray(array):
+    good = True
+    for i in range(0, len(array)):
+        if array[i] == 'x':
+            good = False
+    return good
+
+def initarray():
     list = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4]
-    array = [0] * size
+    arr = [0] * 10
     i = 0
     while len(list) > 0:
         num = randint(0, len(list) - 1)
-        array[i] = list[num]
+        arr[i] = list[num]
         del list[num]
         i = i + 1
-    return array
+    return arr
 
 def printarray(array):
     print("")
     print(" ".join(str(x) for x in range(1, len(array) + 1)))
     print(" ".join(str(x) for x in array))
-
-def checkarray(array):
-    good = True
-    for x in range(0, len(array)):
-        if array[x] == 'x':
-            good = False
-    return good
-
-def clear():
-    os.system('cls')
 
 main()
