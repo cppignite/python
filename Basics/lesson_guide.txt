@@ -1,0 +1,54 @@
+* What is Programming?
+  - Is programming something mysterious like a hacker typing 1s and 0s on the
+      screen like on tv?
+  - Programming is just entering instructions for a computer 
+  - Some common instructions:
+    ~ "Do this; then do that"
+    ~ "If this condition is true, perform this action; otherwise, do that action."
+    ~ "Do this action this many times"
+    ~ "Keep doing this action until I say otherwise"
+  - Give example of Python code and see if they can read it as an exercise
+    ~ They are supposed to guess, not supposed to know 
+  - What is python?
+  - Do programmers need to know a lot of math?
+    ~ No, other than Pre-Algebra.
+    ~ Do you need math to solve Sudoku puzzles or logic? Same idea.
+      Using numbers != math
+      # maybe give a sudoku puzzle example just as a fun break
+  - Is programming boring? No, it's more creative like legos.
+    ~ You have the basic idea of a castle and you have your available blocks.
+      Then you start building. Once you are done, you can make your code pretty 
+    ~ Parallels to app inventor
+    ~ With programming, you don't need to buy extra blocks. All "abstract".
+   *~ Mistakes and bugs are not bad. Just another skill to fix. Nobody cares
+      about fuck ups. They happen often. This isn't a test or you won't lose
+      material / money.
+* How to install python?
+  - We can do this if the students have their own laptops. If not, we will
+    point them to the wiki.
+* How to find help?
+  - Talk about error messages
+  - Do an exercise on error messages. Google search error. Programmers ask so
+    many questions, yours probably already has an answer. Nobody knows the 
+    answer to everything.
+  - Give tips on how to ask for help
+
+** Python Basics - There's a lot to know about Python. Luckily, you don't need
+                   to know much in order to start making programs.
+  - You will need to start learning programming concepts like in App Inventor
+# Expressions
+ - e.g 2 + 2  gives 4
+ - Let's give a list of operatiors. 
+   ~ ** - Exponent
+   ~ %  - Modulus
+   ~ // - Integer Division
+   ~ /  - Division
+   ~ *  - Multiplication
+   ~ -  - Subtraction
+   ~ +  - Addition
+# Data types - Integer, Floating-Point, String
+# String Concatenation and Replication
+# Storing Values in variables
+
+
+  
