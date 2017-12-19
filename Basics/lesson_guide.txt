@@ -49,6 +49,10 @@
 # Data types - Integer, Floating-Point, String
 # String Concatenation and Replication
 # Storing Values in variables
+  * Use a picture of a box as a variable and the data as the items we store
+    - talk about meaningful varaible names
+
+** Remember to talk about error messages throughout
 
 
   
