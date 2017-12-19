@@ -64,4 +64,6 @@ Use a combination of combinations to do manipulation
 
 
 ** Summary
+   - Recap and talk about how next week, we will teach how to make decisions
+     with code w/ control flow
 ** Practice questions
