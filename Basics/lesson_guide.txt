@@ -57,4 +57,6 @@
 ** Activity: Use a few functions to make a program like input()
 Show that input() only takes in a string and you need to convert strings into
   another datatype with int(input())
+When you print a string and you want to use an int, you have to convert it with
+  str(data)
   
