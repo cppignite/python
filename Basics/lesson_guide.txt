@@ -60,3 +60,8 @@ Show that input() only takes in a string and you need to convert strings into
 When you print a string and you want to use an int, you have to convert it with
   str(data)
 Use a combination of combinations to do manipulation 
+
+
+
+** Summary
+** Practice questions
