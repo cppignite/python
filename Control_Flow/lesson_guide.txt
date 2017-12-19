@@ -1,0 +1,42 @@
+Sometimes we do not want our program to go through every single line of code.
+There are times we will want to make certain decisions based on what
+information we get. 
+
+ - Introduce abstraction w/ a flowchart as an example
+ - How is it represented in Python?
+
+** Overview
+
+# Boolean Values
+  - Only two values, True or False
+    + Must be capitalized, true or false will give error
+  - Comparison Operators ( ==, !=, <, >, <=, >=)
+    + Shannon already wrote these out in lesson 1, either move or copy
+    + Special case, 42 == '42' will return false. but 42 == 42.0 is true
+    + EMPHASIZE difference between = and ==
+# Boolean Operators
+  - Binary operators ( and, or, not)
+    + talk about truth tables
+  - Mixing Boolean and and Comparison Operators
+    + We can do this because Comparison Operators evaluate to a boolean value
+    + Talk about Short-Circuiting
+    + Order of Operations
+# Flow of Control
+  - What are Conditions? -Boolean values
+  - Blocks of Code, Talk about indentation
+  - Control Statements
+    + if Statement
+    + else Statement
+    + elif 
+    + while Loops
+    + break Statements
+  - Infinite Loops
+  - For Loops
+    + How while loops and for loops are the same
+# Import
+  - sys.exit() to leave program
+
+# Activity
+
+# Summary
+# Practice Questions
