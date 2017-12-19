@@ -54,5 +54,7 @@
 
 ** Remember to talk about error messages throughout
 
-
+** Activity: Use a few functions to make a program like input()
+Show that input() only takes in a string and you need to convert strings into
+  another datatype with int(input())
   
