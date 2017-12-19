@@ -17,6 +17,7 @@ information we get.
 # Boolean Operators
   - Binary operators ( and, or, not)
     + talk about truth tables
+# Conditions
   - Mixing Boolean and and Comparison Operators
     + We can do this because Comparison Operators evaluate to a boolean value
     + Talk about Short-Circuiting
