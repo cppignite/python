@@ -30,6 +30,10 @@ information we get.
       ~ All control flow statements end in a colon and are followed by a new block
     + else Statement
     + elif 
+      ~ Order of elif matters
+      e.g. elif age > 12
+           elif age > 100
+           # if age = 101, does the second elif run?
     + while Loops
     + break Statements
   - Infinite Loops
