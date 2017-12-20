@@ -27,6 +27,7 @@ information we get.
   - Blocks of Code, Talk about indentation
   - Control Statements
     + if Statement
+      ~ All control flow statements end in a colon and are followed by a new block
     + else Statement
     + elif 
     + while Loops
