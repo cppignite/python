@@ -8,5 +8,5 @@ sum2 = 0
 i = 0
 while i < 101:
   sum2 = sum2 + i
-  i++
+  i += 1
 print("The sum from 1 to 100 is: " + str(sum2)
