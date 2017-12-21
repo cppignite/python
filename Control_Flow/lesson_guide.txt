@@ -24,7 +24,7 @@ information we get.
     + Order of Operations
 # Flow of Control
   - What are Conditions? -Boolean values
-    ~ also, empty strings '' and int 0 counts as "False"
+    + also, empty strings '' and int 0 counts as "False"
   - Blocks of Code, Talk about indentation
   - Control Statements
     + if Statement
@@ -42,6 +42,9 @@ information we get.
     + Ctrl+C to stop the program
   - For Loops
     + How while loops and for loops are the same
+    + range() function
+    + for i in range(5):
+    + i is set to 0
 # Import
   - sys.exit() to leave program
 
