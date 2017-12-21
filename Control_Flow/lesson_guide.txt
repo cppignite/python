@@ -47,6 +47,8 @@ information we get.
     + for i in range(5):
     + i is set to 0
 # Import
+  + cover modules: random, sys
+  + cover "import" and "from ... import ..."
   - sys.exit() to leave program
 
 # Activity
