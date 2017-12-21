@@ -36,7 +36,9 @@ information we get.
            # if age = 101, does the second elif run?
     + while Loops
     + break Statements
+      ~ continue statement
   - Infinite Loops
+    + Ctrl+C to stop the program
   - For Loops
     + How while loops and for loops are the same
 # Import
