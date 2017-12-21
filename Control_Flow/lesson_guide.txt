@@ -43,6 +43,7 @@ information we get.
   - For Loops
     + How while loops and for loops are the same
     + range() function
+      ~ talk about the 2 and 3 argument variants of range()
     + for i in range(5):
     + i is set to 0
 # Import
