@@ -1,0 +1,14 @@
+
+**Overview
+  + def statement + parameters
+  + return statement
+    ~ None value
+  + Local and Global Scope
+    ~ global statement
+  + Exception Handling (try/except)
+
+**Activity
+  + Binary Search
+
+** Summary
+** Practice Problems
