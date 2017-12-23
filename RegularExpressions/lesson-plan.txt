@@ -1,0 +1,33 @@
+While you can search for text quickly with Ctrl+F, you must tell the computer
+EXACTLY what you want to find.
+
+Regular Expressions allow you to find a specific pattern of characters. This
+is useful to know because many word processors allow the use of regular
+expressions.
+
+re module lets you compile Regex objects. You can use the Regex object to call
+the methods: search() to find a single match, findall() to find all matching 
+instances:, and sub() to do a find-and-replace substitution
+
+# Finding Patterns of Text Without Regular Expressions
+# Finding Patterns of Text with Regular Expressions
+### Matching multiple groups with pipe ( | )
+### Optional Matching with Question Mark ( ? )
+### Matching Zero or More with Star ( * ) 
+### Matching One or More with the Plus ( + )
+### Matching Specific Repetitions with Curly Brackets
+
+# Methods
+### findall()
+
+# Character classes
+  \d - numeric digit
+  \D - not numeric digit
+  \w - any letter, digit, or underscore
+  \W - NOT " " " " "
+  \s - any space, tab, or newline
+  \S - NOT " " " " "
+ 
+### Caret and Dollar Sign ( ^ $ )
+### Wildcard Character ( . )
+### Everything Match with dot-star ( .* ) 
