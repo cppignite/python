@@ -1,0 +1,2 @@
+Variables do not stay after your program is done. Files can help save data
+after your program is finished. A file is just a large string.
