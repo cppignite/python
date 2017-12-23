@@ -32,3 +32,20 @@ after your program is finished. A file is just a large string.
   >> os.chdir('C:\\RandomAFLocation')
 
   FileNotFoundError
+
+# Absolute vs. Relative Paths
+  Absolute starts from root
+  Relative starts from working directory
+    Show graphic/example to compare and contrast
+  . (dot) for this directory
+  .. (dot-dot) for parent folder
+
+  Handling Abs/Rel path
+  os.path.abspath(rel_path) - returns absolute path of arg
+  >> os.path.abspath('.')
+
+  os.path.isabs(path) - returns True if argument is an absolute path
+
+
+# Making new folders with os.makedirs('some dir')
+  
