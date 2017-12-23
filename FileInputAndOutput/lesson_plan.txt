@@ -13,7 +13,22 @@ after your program is finished. A file is just a large string.
   OSX and Linux uses forward slashes (/)
   To make python work on all OS-es, you need to handle both cases
   os.path.join() does this easily with the correct path seperator
+
   >> import os
   >> path = os.path.join('usr', 'bin', 'spam')
   'usr\\bin\\spam' # on windoge
   'usr/bin/spam    # on best OS
+
+  You need double back slashes because you need to use an escape character smh
+
+# Current Working Directory (directory is another name for folder)
+
+  >> import os
+  >> os.getcwd()
+  'C:\\Python34'
+  >> os.chdir('C:\\Windows\\System32')
+  >> os.getcwd()
+  'C:\\Windows\\System32'
+  >> os.chdir('C:\\RandomAFLocation')
+
+  FileNotFoundError
