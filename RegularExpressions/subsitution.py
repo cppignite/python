@@ -13,7 +13,8 @@ censoredStr = namesRegex.sub('CENSORED', originalStr)
 print('Original Message: ' + originalStr)
 print('Censored Message: ' + censoredStr)
 
-
+# (\w) defines a group of letters 
 namesRegex = re.compile(r'Agent (\w)\w*')
+# \1 in the string will be replaced with whatever is in the first group
 censoredStr = namesRegex.sub(r'\1****', originalStr)
 print('First Letter of Names Left: ' + censoredStr)
