@@ -12,4 +12,9 @@ PASSWORDS = {'email': 'test',
              'blog': 'test1'
              'luggage': 'test2'}
 
+import sys
+if len(sys.argv) < 2:
+  print('Usage: python passwordLocker.py [account] - copy account password')
+  sys.exit()
 
+account = sys.argv[1]  # first command line arg is the account name
