@@ -1,0 +1,8 @@
+* Find website URLS that begin with either http:// or https://
+* Clean up different date formats and provide a single, standard format.
+  (Such as 3/14/2018, 03-14-2015, or 2015/3/14)
+* Remove sensitive information like Social Security or credit card numbers.
+* find common typos such as multiple  spaces    between      words,
+  accidentally accidentally repeated repeated repeated words, or multiple
+  exclamation marks at the end of sentences!!!!
+
