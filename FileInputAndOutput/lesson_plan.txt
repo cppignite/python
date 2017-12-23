@@ -15,4 +15,5 @@ after your program is finished. A file is just a large string.
   os.path.join() does this easily with the correct path seperator
   >> import os
   >> path = os.path.join('usr', 'bin', 'spam')
-  'usr\\bin\\spam'
+  'usr\\bin\\spam' # on windoge
+  'usr/bin/spam    # on best OS
