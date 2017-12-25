@@ -56,8 +56,10 @@ capitals = readQuizData()
 
 # Step 2: Create the Quiz File and Shuffle The Question Order
 # Generate x=35 quiz files
-os.makedirs('exams')    # makes 'exam' folder
-os.makedirs('answers')  # makes 'answers' folder
+if (not os.path.exists(os.getcwd() + '/exams')):
+  os.makedirs('exams')    # makes 'exam' folder
+if (not os.path.exists(os.getcwd() + '/answers')):
+  os.makedirs('answers')  # makes 'answers' folder
 numOfExams = 35
 for quizNum in range(numOfExams):
   # Create the quiz and answer key files
@@ -95,12 +97,15 @@ for quizNum in range(numOfExams):
     # Write the question and the answer options to the quiz file
     quizFile.write('%s. What is the capital of %s?\n' % (questionNum + 1, 
                    states[questionNum]))
+    # This for loop goes through the integers 0 to 3 will write the answer
+    # options from the list onto the paper
     for i in range(4):
+      # 'ABCD'[i] treats the string as an array and posts the letter
       quizFile.write('    %s. %s \n' % ('ABCD'[i], answerOptions[i]))
     quizFile.write('\n')
 
     # Write the answer key to a file
     answerKeyFile.write('%s. %s\n' % (questionNum + 1, 'ABCD'[
                         answerOptions.index(correctAnswer)]))
-    quizFile.close()
-    answerKeyFile.close()
+  quizFile.close()
+  answerKeyFile.close()
