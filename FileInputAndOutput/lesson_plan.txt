@@ -46,6 +46,26 @@ after your program is finished. A file is just a large string.
 
   os.path.isabs(path) - returns True if argument is an absolute path
 
+  >> os.path.relpath('C:\\Windows', 'C:\\')
+  'Windows'
+  >> os.path.relpath('C:\\Windows', 'C:\\spam\eggs')
+  '..\\..\\Windows'
+
+  os.path.dirname(path) will return a string of everything that comes before
+    the last slash
+  os.path.basename(path) will return a string of everything that comes after
+    the last slash
+
+  >> path = 'C:\\Windows\\System32\\calc.exe'
+  >> os.path.basename(path)
+  'calc.exe'
+  >> os.path.dirname(path)
+  'C:\\Windows\\System32'
+
+  os.path.split(path) takes a path and returns a tuple of the base + dirname
 
 # Making new folders with os.makedirs('some dir')
+# Finding File Sizes and Folder contents
+  os.path.getsize(path) returns the size in bytes of the file
+  os.listdir(path) returns a list of strings for each file in the path
   
