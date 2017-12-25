@@ -30,3 +30,25 @@ Extensions:
     ** Adapt Text User Interface to ask for file input of the questions and ans
   * Create a Graphical User Interface
 """
+# Step 0: Import modules
+import random, re
+
+# Step 1: Store the Quiz Data in a Dictionary
+def readQuizData():
+  testFile = open('key.txt')
+  rawData = testFile.readlines() # stores each line in a list
+  
+  testRegex = re.compile(r'''
+              ([^,]+) # question,         (.+) the wild card regex finds 
+              ,       # comma seperator   anything except a new line character
+              (.+)    # answer            [^,] finds anything except the comma
+              ''', re.VERBOSE)
+  # Find matches in text document
+  
+  matches = {}
+  for i in rawData:
+    info = testRegex.search(i)
+    matches[info.group(1)] = info.group(2)
+  return matches 
+
+capitals = readQuizData()
