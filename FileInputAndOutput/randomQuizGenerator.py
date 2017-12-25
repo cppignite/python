@@ -23,6 +23,7 @@ Here is what the program does:
         multiple-choice options.
 
 Extensions:
+  * Make this program OS independent
   * Create a Text User Interface allowing how many questions to use and how
     many tests to generate
   * Ask what to name exam
