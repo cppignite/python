@@ -1,4 +1,17 @@
 #Overview
 Earlier, we have learned how to create and write new files. Python also has the
 has the ability to organize pre-existing files in your directory, adding to its
-powerful scripting capabilities.
+powerful scripting capabilities. For this project, we will tackle how to 
+automatically back-up our files at will.
+
+###Prior Setup
+With working with files, it is important to know the extensions of a file
+(.txt, .pdf, .doc, .jpg, etc.)
+
+For computers running Windows, file extensions may be hidden. To show them, go
+to Start -> Control Panel -> Appearance and Personalization -> Folder Options.
+On the pop-up dialog, go to View -> Advanced Settings, and uncheck "Hide
+extensions for known filetypes".
+
+#New Concepts
+### The shutil Module
