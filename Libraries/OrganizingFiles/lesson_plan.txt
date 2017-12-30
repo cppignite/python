@@ -15,3 +15,16 @@ extensions for known filetypes".
 
 #New Concepts
 ### The shutil Module
+The shutil, or shell utilities, module has functions that allow users to copy,
+move, and delete files. We will need to import it with "import shutil"
+
+###Copying files and Folders
+shutil.copy(source, destination) will copy a file from the source to the 
+destination. If destination path ends with a filename, the copied file will
+have that name. If the destination path ends with a folder name, the copied 
+file will be the same as the original. The function will return a string of
+the path of the copied file.
+shutil.copytree(source, destination) is similar to shutil.copy() but will also
+copy folders.
+
+
