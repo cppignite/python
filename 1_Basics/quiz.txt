@@ -1,0 +1,45 @@
+#Python Quiz
+
+1) What will the following program print out?
+
+    x = 15
+    x = x + 5
+    print x
+
+    -   20
+    -   "print x"
+    -   x + 5
+    -   5
+    -   15
+
+
+2) Python scripts (files) have names that end with:
+
+    -   .doc
+    -   .exe
+    -   .py
+    -   .png
+
+
+3) What is the proper way to say “good-bye” to Python?
+
+    -   #EXIT
+    -   // stop
+    -   while
+    -   quit()
+
+
+4) Which of the parts of a computer actually execute the program instructions?
+
+    -   Main Memory
+    -   Input/Output Devices
+    -   Central Processing Unit
+    -   Secondary Memory
+
+
+5) What is the best way to think about a "Syntax Error" while programming?
+
+    -   You will never learn how to program
+    -   It is the wrong time of day - wait a few hours and try again
+    -   The computer did not understand the statement that you entered
+    -   The computer is overheating and just wants you 
