@@ -1,0 +1,4 @@
+#Overview
+Earlier, we have learned how to create and write new files. Python also has the
+has the ability to organize pre-existing files in your directory, adding to its
+powerful scripting capabilities.
