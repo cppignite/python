@@ -27,4 +27,9 @@ the path of the copied file.
 shutil.copytree(source, destination) is similar to shutil.copy() but will also
 copy folders.
 
+###Moving and Renaming Files
+In the command line, moving and renaming files are done with the same command.
+The way one can see this is that when you are renaming a file, you are actually
+moving the file from one name to another name. This is done with the function,
+shutil.move(source, destination).
 
