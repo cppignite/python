@@ -7,4 +7,6 @@ called. (e.g backup_1.zip, backup_2.zip, etc.)
 
 Future Extensions: Also put date on folder as well
 '''
-
+# Step 1: Determine name for ZIP File
+# Step 2: Create the ZIP File
+# Step 3: Traverse the directory tree and add files to ZIP File
