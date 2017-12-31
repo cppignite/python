@@ -30,7 +30,7 @@ Another difference is that Windows paths are written with backslashes (\). As
 macOS and Linux uses forward slashes (/). To make python work on all OS-es, you
 will need to handle both cases, which will be shown further down.
 
-A helpful function is *os.path.join()*, it will return a string with a file path
+A helpful function is **os.path.join()**, it will return a string with a file path
 using the correct path seperators
 
 ```python
@@ -47,8 +47,8 @@ Follow along with the Python interactive shell. You may or may not get the same
 output. Do not worry, we are more concerned with you trying out the functions
 so you can see what they do.
 
-*os.getcwd()* - gets current working directory
-*os.chdir(path)* - changes the directory
+**os.getcwd()** - gets current working directory
+**os.chdir(path)** - changes the directory
 
 ```python
   >> import os
@@ -75,7 +75,7 @@ is the relative path. We can try this out in the windows command line.
   .. (dot-dot) for parent folder
 
 ### Creating New Folders
-Use *os.makedirs(path)* to create a folder
+Use **os.makedirs(path)** to create a folder
 
 ## The os.path Module
 Whenever we are working with paths, we will be using the os.path module. To 
@@ -84,19 +84,19 @@ additional functions that can help us. Try to follow along with the Python
 interactive shell
 
 ###  Handling Abssolute and Relative path
-*os.path.abspath(path)* - returns a string with the absolute path of the
+**os.path.abspath(path)** - returns a string with the absolute path of the
                           argument
 ```python
   >> os.path.abspath('.')
 ```
-*os.path.isabs(path)* - returns True if argument is an absolute path
+**os.path.isabs(path)** - returns True if argument is an absolute path
 ```python
   >> os.path.isabs('.') # Why is this sometimes false?
   False
   >> os.path.isabs(os.path.abspath('.')) # Why is this true?
   True
 ```
-*os.path.relpath(path, start) - returns a string of a relative path from
+**os.path.relpath(path, start)** - returns a string of a relative path from
 the start to path. If a start is not given, the current working directory
 is used
 ```python
@@ -104,9 +104,9 @@ is used
   'Windows'
 ```
 
-*os.path.dirname(path)* will return a string of everything that comes before
+**os.path.dirname(path)** will return a string of everything that comes before
     the last slash
-*os.path.basename(path)* will return a string of everything that comes after
+**os.path.basename(path)** will return a string of everything that comes after
     the last slash
 ```python
   >> path = 'C:\\Windows\\System32\\calc.exe'
@@ -116,15 +116,15 @@ is used
   'C:\\Windows\\System32'
 ```
 
-*os.path.split(path)* takes a path and returns a tuple of the base + dirname
+**os.path.split(path)** takes a path and returns a tuple of the base + dirname
 ```python
   >> path = 'C:\\Windows\\System32\\calc.exe'
   >> os.path.split(path)
   ('C:\\Windows\\System32', 'calc.exe')
 ``` 
 # Finding File Sizes and Folder contents
-*os.path.getsize(path)* returns the size in bytes of the file
-*os.listdir(path)* returns a list of strings for each file in the path
+**os.path.getsize(path)** returns the size in bytes of the file
+**os.listdir(path)** returns a list of strings for each file in the path
 ```python
 >> totalSize = 0
 >> # What does this for-loop do?
