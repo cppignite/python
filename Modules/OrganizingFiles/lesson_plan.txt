@@ -48,3 +48,28 @@ for filename in os.listdir():
     print(filename)
     os.unlink(filename)
 ```
+
+### Walking a Directory Tree
+When you want to visit every single file and folder in a directory, use
+os.walk(path). 
+
+os.walk() returns three values, 1.) A string of the current
+folder's name, 2.) A list of strings of the folders in the current folder, 3.)
+A list of strings of the files in the current folder. This allows us to use 
+three variables: folderName, subfolders, and filenames to store these three
+values. We can also use subfolders and filenames in their own for loops since
+they are lists.
+
+```python
+# Prints every single file and folder in directory
+import os
+
+for folderName, subfolders, filenames in os.walk(os.path.abspath('.')):
+  print('The current folder is ' + foldername)
+
+  for subfolder in subfolders:
+    print('SUBFOLDER OF ' + folderName + ': ' + subfolder)
+  for filename in filenames:
+    print('FILE INSIDE ' + folderName + ': ' + filename)
+  print('')
+```
