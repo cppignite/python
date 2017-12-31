@@ -71,8 +71,10 @@ path. While if I am in the Trump folder, .\Documents\nuclear_launch_codes.txt
 is the relative path. We can try this out in the windows command line.
 
     Show graphic/example to compare and contrast
-  . (dot) for this directory
-  .. (dot-dot) for parent folder
+There are two shortcuts to represent this directory and the parent folder
+. (dot) for this directory
+
+.. (dot-dot) for parent folder
 
 ### Creating New Folders
 Use **os.makedirs(path)** to create a folder
@@ -122,7 +124,7 @@ is used
   >> os.path.split(path)
   ('C:\\Windows\\System32', 'calc.exe')
 ``` 
-# Finding File Sizes and Folder contents
+### Finding File Sizes and Folder contents
 **os.path.getsize(path)** returns the size in bytes of the file
 **os.listdir(path)** returns a list of strings for each file in the path
 ```python
@@ -132,6 +134,33 @@ is used
      totalSize = totalSize + os.path.getsize(os.path.join('.', filename))
 >> print(totalSize) 
 ```
+
+### Checking path Validity
+Python will crash if you provide a path that does not exist. Luckily, the
+os.path modules has some functions for us to prevent that.
+
+**os.path.exists(path)** - returns True if the file or folder exists and returns
+                           False if it doesn't.
+**os.path.isfile(path)** - returns True if the path points to a file and returns
+                           False if it doesn't.
+**os.path.isdir(path)** - returns True if the path points to a folder and 
+                          returns False if it doesn't.
+
+## Reading and Writing Files
+We need to be comfortable with all the functions above so we can tell Python
+exactly the location of the files we want to read and write. The files we will
+be working on are *plaintext files*, which contain only normal human-readable
+text. Examples of plaintext files are files that end with .txt, or .py. We
+will **not** be working with *binary files* which are only computer readable
+files. If we tried to open a binary file to read, we will get garbled text.
+
+We will be using three functions to read plain text files,
+**open()** - returns a *File* object
+**read()** or **write()** - reads from or writes to the file
+**close()** - closes the *File* object which allows Python to save the file
+
+### Opening Files with the open() Function
+
   
   os.path.abspath()
   os.path.basename()
