@@ -74,6 +74,23 @@ for folderName, subfolders, filenames in os.walk(os.path.abspath('.')):
   print('')
 ```
 
-### Compressing Files with the zipfile Module
-A zipfile is an archive file that allows the storage of multiple files and
+## Compressing Files with the zipfile Module
+A ZIP file is an archive file that allows the storage of multiple files and
 folders into one. 
+
+### Reading ZIP Files
+To read a ZIP file, we must create a ZipFile object first. This is similar to 
+the File object created for file input/output. To create a ZipFile object, call
+zipfile.ZipFile('name.zip'). zipfile is the name of the Python module. Create
+a zipfile called "example.zip" to test this program and try it out with the 
+Python interactive shell
+```python
+import zipfile, os
+exampleZip = zipfile.ZipFile('example.zip')
+exampleZip.namelist()
+fileInfo = exampleZip.getinfo('some_file.txt')
+fileInfo.file_size
+fileInfo.compress_size
+print('Compressed file is %sx smaller!' % (round(fileInfo.file_size / fileInfo.compress_size, 2)))
+exampleZip.close()
+```
