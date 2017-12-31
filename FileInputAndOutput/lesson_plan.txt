@@ -4,27 +4,53 @@ after your program is finished. A file is just a large string.
 
 # New Concepts
 ### File Paths and File Extensions
-  Show Tree structure of a folder hierarchy
-  What is the Root Folder?
-  How are USB Drives seen differently in Windows and Linux?
-    Windows show entirely different root folders
-    Linux + OSX attach the drive to another folder in root
+A file can be referred to in two ways, its filename and its path. The path is
+the location of the file while the filename is the name of the file. For 
+example, if I was the US President and I had the nuclear launch codes, the path
+would probably be something like;
 
-### Backslash on Windows and Forward Slash on OSX and Linux
-  Windows paths are written with backslashes (\)
-  OSX and Linux uses forward slashes (/)
-  To make python work on all OS-es, you need to handle both cases
-  os.path.join() does this easily with the correct path seperator
+C:\Users\Trump\Documents\nuclear_launch_codes.txt
 
+In this case, the filename of the launch codes is "nuclear_launch_codes.txt"
+and the "Users", "Trump", and "Documents" are known as folders or directories.
+the C:\ in Windows is called the root folder. Root means the base or the lowest 
+you can go, like a plant. The root folder contains everything. In Linux or 
+macOS, the root folder is /. Windows and Unix-based operating systems deal with
+files different. Feel free to ask questions.
+
+As a note, USB Drives are represented differently in Windows and Unix-based
+operating systems. In Windows, USB Drives are shown with an entirely different
+root folder like D:\ or E:\. In Linux and macOS, the drives are attached to 
+the root folder, sometimes under mnt\.
+
+(Show Tree structure of a folder hierarchy)
+
+### Backslash on Windows and Forward Slash on macOS and Linux
+Another difference is that Windows paths are written with backslashes (\). As
+macOS and Linux uses forward slashes (/). To make python work on all OS-es, you
+will need to handle both cases, which will be shown further down.
+
+A helpful function is *os.path.join()*, it will return a string with a file path
+using the correct path seperators
+
+```python
   >> import os
   >> path = os.path.join('usr', 'bin', 'spam')
   'usr\\bin\\spam' # on windoge
   'usr/bin/spam    # on best OS
+```
+You need double back slashes when using Windows because you need to use an 
+escape character smh
 
-  You need double back slashes because you need to use an escape character smh
+### Current Working Directory (directory is another name for folder)
+Follow along with the Python interactive shell. You may or may not get the same
+output. Do not worry, we are more concerned with you trying out the functions
+so you can see what they do.
 
-# Current Working Directory (directory is another name for folder)
+*os.getcwd()* - gets current working directory
+*os.chdir(path)* - changes the directory
 
+```python
   >> import os
   >> os.getcwd()
   'C:\\Python34'
@@ -34,42 +60,78 @@ after your program is finished. A file is just a large string.
   >> os.chdir('C:\\RandomAFLocation')
 
   FileNotFoundError
+```
 
-# Absolute vs. Relative Paths
-  Absolute starts from root
-  Relative starts from working directory
+### Absolute vs. Relative Paths
+An absolute path is a path that starts from root. A relative starts from working
+directory.
+
+For example, C:\Users\Trump\Documents\nuclear_launch_codes.txt is the absolute 
+path. While if I am in the Trump folder, .\Documents\nuclear_launch_codes.txt
+is the relative path. We can try this out in the windows command line.
+
     Show graphic/example to compare and contrast
   . (dot) for this directory
   .. (dot-dot) for parent folder
 
-  Handling Abs/Rel path
-  os.path.abspath(rel_path) - returns absolute path of arg
+### Creating New Folders
+Use *os.makedirs(path)* to create a folder
+
+## The os.path Module
+Whenever we are working with paths, we will be using the os.path module. To 
+import this, we only need to type in "import os". This module gives us a few 
+additional functions that can help us. Try to follow along with the Python 
+interactive shell
+
+###  Handling Abssolute and Relative path
+*os.path.abspath(path)* - returns a string with the absolute path of the
+                          argument
+```python
   >> os.path.abspath('.')
-
-  os.path.isabs(path) - returns True if argument is an absolute path
-
+```
+*os.path.isabs(path)* - returns True if argument is an absolute path
+```python
+  >> os.path.isabs('.') # Why is this sometimes false?
+  False
+  >> os.path.isabs(os.path.abspath('.')) # Why is this true?
+  True
+```
+*os.path.relpath(path, start) - returns a string of a relative path from
+the start to path. If a start is not given, the current working directory
+is used
+```python
   >> os.path.relpath('C:\\Windows', 'C:\\')
   'Windows'
-  >> os.path.relpath('C:\\Windows', 'C:\\spam\eggs')
-  '..\\..\\Windows'
+```
 
-  os.path.dirname(path) will return a string of everything that comes before
+*os.path.dirname(path)* will return a string of everything that comes before
     the last slash
-  os.path.basename(path) will return a string of everything that comes after
+*os.path.basename(path)* will return a string of everything that comes after
     the last slash
-
+```python
   >> path = 'C:\\Windows\\System32\\calc.exe'
   >> os.path.basename(path)
   'calc.exe'
   >> os.path.dirname(path)
   'C:\\Windows\\System32'
+```
 
-  os.path.split(path) takes a path and returns a tuple of the base + dirname
-
-# Making new folders with os.makedirs('some dir')
+*os.path.split(path)* takes a path and returns a tuple of the base + dirname
+```python
+  >> path = 'C:\\Windows\\System32\\calc.exe'
+  >> os.path.split(path)
+  ('C:\\Windows\\System32', 'calc.exe')
+``` 
 # Finding File Sizes and Folder contents
-  os.path.getsize(path) returns the size in bytes of the file
-  os.listdir(path) returns a list of strings for each file in the path
+*os.path.getsize(path)* returns the size in bytes of the file
+*os.listdir(path)* returns a list of strings for each file in the path
+```python
+>> totalSize = 0
+>> # What does this for-loop do?
+>> for filename in os.listdir('.')
+     totalSize = totalSize + os.path.getsize(os.path.join('.', filename))
+>> print(totalSize) 
+```
   
   os.path.abspath()
   os.path.basename()
