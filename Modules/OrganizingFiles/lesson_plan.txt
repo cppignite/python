@@ -86,11 +86,32 @@ a zipfile called "example.zip" to test this program and try it out with the
 Python interactive shell
 ```python
 import zipfile, os
-exampleZip = zipfile.ZipFile('example.zip')
+exampleZip = zipfile.ZipFile('cuteStuff.zip')
 exampleZip.namelist()
-fileInfo = exampleZip.getinfo('some_file.txt')
+fileInfo = exampleZip.getinfo('zergRush.jpg')
 fileInfo.file_size
 fileInfo.compress_size
 print('Compressed file is %sx smaller!' % (round(fileInfo.file_size / fileInfo.compress_size, 2)))
 exampleZip.close()
 ```
+namelist() returns a list of strings for all files and folders in the ZIP file.
+getinfo() can be used on one of these strings to get the file_size() and 
+compress_size() in bytes.
+
+### Extracting from ZIP Files
+Use extractall() to place all files and folders into the current working dir.
+You can also pass a path inside extractall() to store the files into a folder
+other than the current working directory. If the folder does not exist, one 
+will be created
+```python
+# Extracting everything
+import zipfile,os
+exampleZip = zipfile.ZipFile('cuteStuff.zip')
+exampleZip.extractall()
+exampleZip.close()
+
+# Extracting a single file
+# exampleZip.extract('zergRush.jpg')
+# exampleZip.extract('zergRush.jpg', 'some_other_dir')
+```
+
