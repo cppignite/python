@@ -53,6 +53,7 @@ def readQuizData():
     matches[info.group(1)] = info.group(2)
   return matches 
 
+# Create dictionary from key
 capitals = readQuizData()
 
 # Step 2: Create the Quiz File and Shuffle The Question Order
@@ -103,6 +104,7 @@ for quizNum in range(numOfExams):
     for i in range(4):
       # 'ABCD'[i] treats the string as an array and posts the letter
       quizFile.write('    %s. %s \n' % ('ABCD'[i], answerOptions[i]))
+
     quizFile.write('\n')
 
     # Write the answer key to a file
