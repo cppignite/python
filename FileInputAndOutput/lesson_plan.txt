@@ -1,14 +1,16 @@
+# Overview
 Variables do not stay after your program is done. Files can help save data
 after your program is finished. A file is just a large string.
 
-# File Paths and File Extensions
+# New Concepts
+### File Paths and File Extensions
   Show Tree structure of a folder hierarchy
   What is the Root Folder?
   How are USB Drives seen differently in Windows and Linux?
     Windows show entirely different root folders
     Linux + OSX attach the drive to another folder in root
 
-# Backslash on Windows and Forward Slash on OSX and Linux
+### Backslash on Windows and Forward Slash on OSX and Linux
   Windows paths are written with backslashes (\)
   OSX and Linux uses forward slashes (/)
   To make python work on all OS-es, you need to handle both cases
@@ -69,3 +71,19 @@ after your program is finished. A file is just a large string.
   os.path.getsize(path) returns the size in bytes of the file
   os.listdir(path) returns a list of strings for each file in the path
   
+  os.path.abspath()
+  os.path.basename()
+  os.path.exists()
+  file.startswith()
+  file.endswith()
+  open()
+  write()
+  os.path.join()
+
+
+  Need
+  list()
+  dict.keys()
+  dict.values()
+  random.shuffle()
+
