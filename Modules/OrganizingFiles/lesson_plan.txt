@@ -115,3 +115,24 @@ exampleZip.close()
 # exampleZip.extract('zergRush.jpg', 'some_other_dir')
 ```
 
+### Creating and Adding to ZIP files
+To create a compressed ZIP file, open the ZipFile object with 'w' to write.
+Use the write() method to compress a file and add it to the zipfile. The first
+argument is the name of the file, and the second argument is the compression
+type (just keep it as zipfile.ZIP_DEFLATED). This will erase any existing ZIP
+file. If you want to append, or add to a ZIP file, pass 'a' for append.
+```python
+import zipfile
+newZip = zipfile.ZipFile('new.zip', 'w')
+newZip.write('zergRush.jpg', compress_type=zipfile.ZIP_DEFLATED)
+newZip.close()
+```
+
+# Activity
+# Summary
+The os and shutil modules provides functions for copying, moving, renaming, and
+deleting files. When wanting to perform operations on every file and folder
+within a directory, use the os.walk() function. The zipfile module allows you
+to compress and extract .zip files. All together, we can use this to make a 
+basic backup script
+
