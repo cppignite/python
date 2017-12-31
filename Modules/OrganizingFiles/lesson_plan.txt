@@ -73,3 +73,7 @@ for folderName, subfolders, filenames in os.walk(os.path.abspath('.')):
     print('FILE INSIDE ' + folderName + ': ' + filename)
   print('')
 ```
+
+### Compressing Files with the zipfile Module
+A zipfile is an archive file that allows the storage of multiple files and
+folders into one. 
