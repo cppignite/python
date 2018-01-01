@@ -14,11 +14,18 @@ import webbrowser, sys, pyperclip
 
 # Step 1: Figure Out the URL
 # The idea is that you can search by putting the address on the url of GMaps
+
+
+# Step 2: Handle the Command Line Arguments
 if len(sys.argv) > 1:
   # Get Address from command line, we want to have the addr as a single string
   # We don't want the program name so we start from argv[1:]
   address = ' '.join(sys.argv[1:])
 
-# Step 2: Handle the Command Line Arguments
-
 # Step 3: Handle the Clipboard Content and Launch Browser
+else:
+  # Get address from clipboard
+  address = pyperclip.paste()
+
+webbrowser.open('https://www.google.com/maps/place/' + address)
+
