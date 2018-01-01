@@ -2,7 +2,7 @@
 
 def verifyJellyBeans(numberOfJB):
   if (numberOfJB < 0):
-    raise Exception('Jelly Beans cannot have a non-negative number')
+    raise Exception('Jelly Beans cannot have a non-negative number. Re-enter.')
   return numberOfJB
 
 while True:
