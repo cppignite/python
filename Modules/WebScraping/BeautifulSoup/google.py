@@ -16,4 +16,15 @@
    * Finds the links to each search result
    * Call the webbrowser.open() function to open the browser
 '''
+# Step 1: Get the Command Line Arguments and Request the Search Page
+# We notice that the google search url is 'http://google.com/search?q=SOMETHING
+import requests, sys, webbrowser, bs4
+
+print('Googling...') # Prints a message for the user
+res = requests.get('http://google.com/search?q=' + ' '.join(sys.argv[1:]))
+res.raise_for_status()
+
+# Retrieve top search result links
+
+# Open a browser tab for each result
 
